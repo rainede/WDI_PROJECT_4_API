@@ -10,18 +10,41 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170216123459) do
+ActiveRecord::Schema.define(version: 20170220150142) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
+  create_table "posts", force: :cascade do |t|
+    t.text     "text"
+    t.float    "anger"
+    t.float    "disgust"
+    t.float    "fear"
+    t.float    "joy"
+    t.float    "sadness"
+    t.float    "analytical"
+    t.float    "confident"
+    t.float    "tentative"
+    t.float    "openness_big5"
+    t.float    "conscientiousness_big5"
+    t.float    "extraversion_big5"
+    t.float    "agreeableness_big5"
+    t.float    "emotional_range_big5"
+    t.integer  "user_id"
+    t.datetime "created_at",             null: false
+    t.datetime "updated_at",             null: false
+    t.index ["user_id"], name: "index_posts_on_user_id", using: :btree
+  end
+
   create_table "users", force: :cascade do |t|
     t.string   "email"
     t.string   "password_digest"
-    t.string   "imagefirst_name"
+    t.string   "image"
+    t.string   "first_name"
     t.string   "last_name"
     t.datetime "created_at",      null: false
     t.datetime "updated_at",      null: false
   end
 
+  add_foreign_key "posts", "users"
 end

@@ -1,0 +1,35 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  text: MyText
+  anger: 1.5
+  disgust: 1.5
+  fear: 1.5
+  joy: 1.5
+  sadness: 1.5
+  analytical: 1.5
+  confident: 1.5
+  tentative: 1.5
+  openness_big5: 1.5
+  conscientiousness_big5: 1.5
+  extraversion_big5: 1.5
+  agreeableness_big5: 1.5
+  emotional_range_big5: 1.5
+  user: one
+
+two:
+  text: MyText
+  anger: 1.5
+  disgust: 1.5
+  fear: 1.5
+  joy: 1.5
+  sadness: 1.5
+  analytical: 1.5
+  confident: 1.5
+  tentative: 1.5
+  openness_big5: 1.5
+  conscientiousness_big5: 1.5
+  extraversion_big5: 1.5
+  agreeableness_big5: 1.5
+  emotional_range_big5: 1.5
+  user: two
