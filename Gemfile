@@ -14,6 +14,8 @@ gem 'figaro'
 gem 'active_model_serializers'
 gem 'jwt'
 gem 'httparty'
+# gem 'nexmo'
+
 
 group :development, :test do
   gem 'byebug', platform: :mri
