@@ -28,5 +28,13 @@ module WdiProject4Api
     config.api_only = true
     config.eager_load_paths << Rails.root.join('lib')
     config.time_zone = 'London'
+    config.middleware.insert_before 0, Rack::Cors do
+      allow do
+        origins '*'
+        resource '*',
+          headers: :any,
+          methods: [:get, :post, :put, :patch, :delete, :options, :head]
+      end
+    end
   end
 end
