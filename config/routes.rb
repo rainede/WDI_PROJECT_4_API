@@ -1,8 +1,8 @@
 Rails.application.routes.draw do
-  resources :messages
   scope :api do
     resources :users, only: [:index, :show]
     resources :posts
+    resources :messages
     resources :text_messages
     post 'login', to: 'authentications#login'
     post 'register', to: 'authentications#register'
